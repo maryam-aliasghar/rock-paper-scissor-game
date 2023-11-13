@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSOR</title>
+    <link rel="stylesheet" href="rock paper scissor.css">
+</head>
+<body>
+    <!-- computer ramdonly selects a move-->
+    <div class="heading">
+    <h1>Rock Paper Scissor</h1></div>
+    <div class="selections">
+<button class="select" onclick="
+    
+  playGame('rock');
+
+">&#128074;</button>
+
+<button class="select" onclick="
+    
+  playGame('paper');
+
+">&#9995;</button>
+<button class="select" onclick="
+  
+   playGame('scissor');
+
+">&#9996;</button>
+<div class="game-result">
+<p class="js-result"></p>
+
+<p class="js-moves"></p>
+
+<p class="js-score"></p>
+</div>
+ 
+<button class="reset" onclick="
+  score.wins=0;
+  score.losses=0;
+  score.ties=0;
+ //use local storage .remove item to remove scores after refresh
+  localStorage.removeItem('score');
+  document.querySelector('.js-score').innerHTML=`Wins: ${score.wins} Losses: ${score.losses } Ties: ${score.ties}`;
+  "> Reset Score</button>
+
+</div>
+
+ <script src="rock paper scissor.js"></script>
+ </script>
+</body>
+</html>
